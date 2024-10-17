@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>to-do-list</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+      </head>
+    <body>
+        
+        <div class="container">
+
+            <h2> To Do List App</h2>
+            <p><em> Double click to mark an item off, click on "X" to delete 
+                an item, and drag items to reorder.</em></p>
+
+<!-- added id and onsubmit attribute for form element  -->
+            <form id="todoForm" onsubmit="newItem(event)">
+                <!-- added a placeholder attribute for <input> -->
+                <input type="text" name="ListItem" id="input" placeholder="Add a new item">
+            </form>
+           
+            <!-- a javaScript event attribute is triggered when a user
+            clicks on the specific div element -->
+            <div onclick="newItem()" id="button" type="submit">Add</div>
+            
+            <ol id="list"></ol>
+        </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+
+    <script src="script.js"></script>
+    </body>
+</html>
+
