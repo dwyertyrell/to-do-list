@@ -29,15 +29,15 @@ else{
 // add '.strike' class to li, via toggle
 
 function crossOut() {
-    li.toggleClass('strike')
+    li.toggleClass('strike');
  }
 //  an event listener on the 'double-click' event.
-li.on('dblclick', function() {
-    crossOut();
-    });
+li.on('dblclick', crossOut);
+    
+
 
 // create a <crossOutButton> element on DOM
-let crossOutButton = $('<crossOutButton></crossOutButton')
+let crossOutButton = $('<crossOutButton></crossOutButton>')
 // create a text node with content "X", then append to 
 // the variable containing the <crossOutButton> element.
  crossOutButton.append(document.createTextNode("X"));
@@ -46,7 +46,6 @@ let crossOutButton = $('<crossOutButton></crossOutButton')
 li.append(crossOutButton);
 
 
-// crossOutButton.on('click', deleteListItem());
 
 // adding the 'delete' class into the function for 
 // an event listener.  
@@ -58,6 +57,20 @@ crossOutButton.on('click', deleteListItem);
 
 // reordering the items 
 $('#list').sortable();
+
+
+$('window').on('keydown', (e) => {
+   if(e.key === 'Enter') {
+    newItem();
+   }
+});
+// why does the web page refresh after i press the enter key?
+
+// i want to empty the input field after newItem() has been called with 
+// the add button.
+
+inputValue.empty();
+
 }
 
 
