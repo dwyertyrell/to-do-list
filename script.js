@@ -32,7 +32,7 @@ function crossOut() {
     li.toggleClass('strike');
  }
 //  an event listener on the 'double-click' event.
-li.on('dblclick', crossOut);
+li.on("dblclick", crossOut);
     
 
 
@@ -55,7 +55,8 @@ function deleteListItem() {
 
 crossOutButton.on('click', deleteListItem);
 
-// reordering the items 
+// reordering the items- my jQuery was not loaded correctly, hence 
+// why it did not work before. 
 $('#list').sortable();
 
 
@@ -68,7 +69,7 @@ $('window').on('keydown', (e) => {
 
 // i want to empty the input field after newItem() has been called with 
 // the add button.
-
+// why is this code not working? 
 inputValue.empty();
 
 }
